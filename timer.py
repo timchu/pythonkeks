@@ -4,6 +4,7 @@
 
 import time
 import os
+from sound import playTimeSound
 
 def print_command(thing_to_print):
     return "printf '" + str(thing_to_print) + "'"
@@ -13,6 +14,7 @@ def spawn_terminal(command):
 
 t = raw_input("Enter time in minutes: ")
 time.sleep(60 * float(t))
+playTimeSound()
 spawn_terminal(print_command("TIME!"))
 
 
